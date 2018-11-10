@@ -1,0 +1,324 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Calibri;
+}
+
+body {
+	background-color: rgb(128, 128, 128);
+}
+
+
+/* Grid Content */
+.gridmain {
+	display: grid;
+	grid-template-areas: 	". . ."
+							". hd ."
+							". nav ."
+							". attdata ."
+							". stagedata .";
+	grid-template-columns: 25px 1fr 25px;
+	grid-template-rows: 25px 104px 50px 50% 50%;
+	background-color: rgb(128, 128, 128);
+}
+
+
+/* Header */
+.hd {
+	grid-area: hd;
+	height: 104px;
+	width: 100%;
+}
+
+.portrait {
+	height: 100px;
+	width: 100px;
+	background-size: contain;
+	border-radius: 3px;
+	border: 2px solid rgb(13, 13, 13);
+	display: inline-block;
+}
+
+.attristage {
+	background-image: url(../charpics/attributes.png);	
+}
+
+.chartitle {
+	font-size: 70px;
+	display: inline-block;
+	position: absolute;
+	align-self: center;
+	padding: 9px;
+	color: white;
+}
+
+.att {
+	text-shadow: 2px 2px rgba(13, 13, 13 0.3);
+}
+
+
+/* Navigation */
+.nav {
+	grid-area: nav;
+	font-size: 20px;
+}
+
+.nav ul {
+	margin-top: 8px;
+}
+
+.nav li {
+	list-style-type: none;
+	float: left;
+	background: rgb(13, 13, 13);
+	border-radius: 3px;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+.nav li a {
+	text-decoration: none;
+	color: white;
+}
+
+.chardropdown {
+	position: absolute;
+	display: none;
+	background: rgb(13, 13, 13);
+	margin-top: 5px;
+	margin-left: -10px;
+	border-radius: 3px;
+}
+
+.chardropdown a {
+	margin: 10px;
+	display: block;
+	text-align: center;
+}
+
+
+/* Navigation Effects */
+
+.nav li:after {
+	content: "";
+	display: block;
+	height: 1px;
+	background-color: white;
+	width: 0;
+	transition: .5s ease;
+}
+
+.nav li:hover:after {
+	width: 100%;
+}
+
+.under:after {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 0;
+	transition: .5s ease;
+}
+
+.under:hover:after {
+	width: 100%;
+}
+
+.charholder:hover .chardropdown {
+	display: block;
+}
+
+.airbc:after {
+	background-color: rgb(113, 75, 116);
+}
+
+.earthbc:after {
+	background-color: rgb(57, 96, 75);
+}
+
+.firebc:after {
+	background-color: rgb(144, 35, 35);
+}
+
+.waterbc:after {
+	background-color: rgb(47, 63, 140);
+}
+
+.oribc:after {
+	background-color: rgb(160, 255, 255);
+}
+
+
+/* Attributes */
+
+.attdata {
+	grid-area: attdata;
+}
+
+table {
+	text-align: center;
+	margin-bottom: 25px;
+	border-collapse: collapse;
+	color: white;
+	display: inline-block;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+th, td {
+	border: 2px solid rgb(13, 13, 13);
+	padding: 5px;
+}
+
+.boldmoves {
+	font-weight: bold;
+}
+
+.undermoves {
+	text-decoration: underline;
+}
+
+.notes {
+	height: 400px;
+	max-width: 250px;
+	border: 2px solid rgb(13, 13, 13);
+}
+
+.notes th {
+	border: none;
+}
+
+.notes td {
+	border: none;
+}
+
+.blankcell {
+	border: none;
+}
+
+.aircell {
+	background-color: rgba(113, 75, 116, 0.3);
+}
+
+.earthcell {
+	background-color: rgba(57, 96, 75, 0.3);
+}
+
+.firecell {
+	background-color: rgba(144, 35, 35, 0.3);
+}
+
+.watercell {
+	background-color: rgba(47, 63, 140, 0.3);
+}
+
+.oricell {
+	background-color: rgba(160, 255, 255, 0.3);
+}
+
+.high {
+	font-weight: bold;
+}
+
+.low {
+	text-decoration: underline;
+}
+
+
+/* Stage Data */
+
+.stagedata {
+	grid-area: stagedata;
+}
+
+.stagecard {
+	height: 586px;
+	width: 600px;
+	margin-bottom: 25px;
+	border: 2px solid rgb(13, 13, 13);
+	border-radius: 3px;
+	display: inline-block;
+	margin-left: 25px;
+}
+
+.stageimg{
+	background-size: contain;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	position: relative;
+	height: 400px;
+	margin: 5px;
+	border-bottom: 2px solid rgb(13, 13, 13);
+}
+
+.carddata {
+ 	color: white;
+ 	font-size: 20px;
+}
+
+.scdleft {
+	font-weight: bold;
+	border-bottom: 1px solid rgb(13, 13, 13);
+	padding: 5px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.scdleft:last-child {
+	border-bottom: none;
+}
+
+.scdright {
+	float: right;
+}
+
+
+/* Stage Portraits */
+
+.abyss {
+	background-image: url("../stagepics/abyss.png");
+}
+
+.airarm {
+	background-image: url("../stagepics/airarm.png");
+}
+
+.blazhid {
+	background-image: url("../stagepics/blazhid.png");
+}
+
+.firecap {
+	background-image: url("../stagepics/firecap.png");
+}
+
+.frozfort {
+	background-image: url("../stagepics/frozfort.png");
+}
+
+.gates {
+	background-image: url("../stagepics/gates.png");
+}
+
+.mercport {
+	background-image: url("../stagepics/mercport.png");
+}
+
+.rockwall {
+	background-image: url("../stagepics/rockwall.png");
+}
+
+.spirit {
+	background-image: url("../stagepics/spirit.png");
+}
+
+.tempeak {
+	background-image: url("../stagepics/tempeak.png");
+}
+
+.tower {
+	background-image: url("../stagepics/tower.png");
+}
+
+.treetop {
+	background-image: url("../stagepics/treetop.png");
+}

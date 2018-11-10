@@ -1,0 +1,363 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Grid */
+.gridmain {
+	display: grid;
+	grid-template-areas: 	"hd hd hd hd hd hd hd hd hd"
+							"who who who what what what want want want"
+							"mainconCP mainconCP mainconCP mainconEM mainconEM mainconEM mainconTW mainconTW mainconTW"
+							"project1 project1 project1 project2 project2 project2 project3 project3 project3";
+	grid-template-rows: 400px 330px 300px 344px;
+	grid-template-columns: 25px 1fr 25px 25px 1fr 25px 25px 1fr 25px;
+}
+
+/* Header */
+.header {
+	grid-area: hd;
+	background-color: #669966;
+}
+
+.headerImg {
+	background-image: url(./images/me.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	border-radius: 100%;
+	overflow: hidden;
+	position: relative;
+	height: 200px;
+	width: 200px;	
+	margin-top: 100px;
+	margin-left: 100px;
+	box-shadow: 0 1px 1px 0;
+}
+
+.helloThere {
+	font-family: Arial;
+	font-size: 48px;
+	font-style: italic;
+	color: #333333;
+	position: absolute;
+	top: 0;
+	margin-left: 350px;
+	margin-top: 166px;
+}
+
+.subHello {
+	font-size: 12px;
+	text-indent: 50px;
+}
+
+.headerArrow {
+	display: inline-block;
+	position: absolute;
+	margin-left: 50%;
+	margin-top: 75px;
+	padding: 5px;
+	border: solid #333333;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+/* Logo */
+.logo {
+  height: 60px;
+  width: 40px;
+  float: right;
+  margin-top: 330px;
+  margin-right: 10px;
+}
+
+.bc {
+  background-color: #333333;
+}
+
+/* B */
+.b {
+  position: absolute; 
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.blineone {
+  position: absolute;
+  height: 55px;
+  width: 5px;
+}
+
+.blinetwo {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 30px;
+  height: 5px;
+  width: 15px;
+}
+
+.blinethree {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 20px;
+  height: 25px;
+  width: 5px;
+}
+
+.blinefour {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 50px;
+  height: 5px;
+  width: 15px;
+}
+
+
+/* G */
+.g {
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.glineone {
+  position: absolute;
+  margin-left: 10px;
+  width: 5px;
+  height: 15px;
+}
+
+.glinetwo {
+  position: absolute;
+  margin-left: 10px;
+  height: 5px;
+  width: 25px;
+}
+
+.glinethree {
+  position: absolute;
+  margin-left: 30px;
+  width: 5px;
+  height: 15px;
+}
+
+.glinefour {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 20px;
+  height: 5px;
+  width: 25px;
+}
+
+.glinefive {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 5px;
+  height: 35px;
+}
+
+
+/* Who I Am/Experience */
+.who {
+	grid-area: who;
+	background-color: #333333;
+}
+
+
+/* What I Can Do */
+.what {
+	grid-area: what;
+	background-color: #333333;
+}
+
+
+/* What I Want To Do */
+.want {
+	grid-area: want;
+	background-color: #333333;
+}
+
+.boxText {
+	font-family: Arial;
+	text-align: center;
+	color: #FFCC00;
+	border: #FFCC00 2px dashed;
+	border-radius: 3px;
+	margin: 10px;
+	height: 306px;
+}
+
+.boxTitle {
+	text-decoration: underline;
+	font-weight: bold;
+	margin: 10px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	padding: 10px;
+}
+
+
+/* Contact Form */
+.mainconCP {
+	grid-area: mainconCP;
+	background-color: #FFCC00;
+	padding: 10px;
+}
+
+.mainconEM {
+	grid-area: mainconEM;
+	background-color: #FFCC00;
+	padding: 10px;
+}
+
+.mainconTW {
+	grid-area: mainconTW;
+	background-color: #FFCC00;
+	padding: 10px;
+}
+
+.mainconText {
+	color: #993366;
+	font-family: Arial;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px;
+	font-size: 34px;
+	height: 180px;
+}
+
+.mainconLink {
+	color: #993366;
+}
+
+.mainconSubtext {
+	font-weight: normal;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.mainconUnderline {
+	position: relative;
+	bottom: 0;
+	height: 2px;
+	width: 0;
+	background-color: #993366;
+	transition: .3s;
+}
+
+.mainconCP:hover .mainconUnderline {
+	width: 100%;
+}
+
+.mainconEM:hover .mainconUnderline {
+	width: 100%;
+}
+
+.mainconTW:hover .mainconUnderline {
+	width: 100%;
+}
+
+.mainconImg {
+	background-size: contain;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	position: relative;
+	height: 40px;
+	width: 40px;
+	margin: 10px auto;
+}
+
+.CP {
+	background-image: url(./images/codepen.png);
+}
+
+.EM {
+	background-image: url(./images/email.png);
+}
+
+.TW {
+	background-image: url(./images/twitter.png);
+}
+
+
+/* Projects */
+.project1 {
+	grid-area: project1;
+	background-color: #993366;
+}
+
+.project2 {
+	grid-area: project2;
+	background-color: #993366;
+}
+
+.project3 {
+	grid-area: project3;
+	background-color: #993366;
+}
+
+.projectContainer {
+	margin: 10px;
+	border: 2px solid #333333;
+	border-radius: 3px;
+	height: 320px;
+}
+
+.projectImage {
+	height: 300px;
+	width: 390px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	margin-left: 4%;
+	margin-right: 4%;
+	margin-top: 10px;
+}
+
+.project1Image {
+	background-image: url(./images/rivals.png);
+}
+
+.project2Image {
+	background-image: url(./images/dnd.png);
+}
+
+.projectCover {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transition: background-color ease .3s;
+}
+
+.projectImage:hover .projectCover {
+	background-color: #333333;
+}
+
+a {
+	text-decoration: none;
+	color: #669933;
+}
+
+.projectText {
+	font-family: Arial;
+	font-size: 24px;
+	text-align: center;
+	padding: 127px 0;
+	opacity: 0;
+	transition: opacity ease .4s;
+}
+
+.projectSubtext {
+	font-size: 16px;
+}
+
+.projectImage:hover .projectText {
+	opacity: 1;
+}

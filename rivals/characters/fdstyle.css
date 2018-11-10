@@ -1,0 +1,259 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Calibri;
+}
+
+body {
+	background-color: rgb(128, 128, 128);
+}
+
+
+/* Grid Content */
+
+.gridmain {
+	display: grid;
+	grid-template-areas: 	". . ."
+							". hd ."
+							". nav ."
+							". fd .";
+	grid-template-columns: 25px 1fr 25px;
+	grid-template-rows: 25px 104px 50px 100%;
+	background-color: rgb(128, 128, 128);
+}
+
+
+/* Header */
+.hd {
+	grid-area: hd;
+	height: 104px;
+	width: 100%;
+}
+
+.portrait {
+	height: 100px;
+	width: 100px;
+	background-size: contain;
+	border-radius: 3px;
+	border: 2px solid rgb(13, 13, 13);
+	display: inline-block;
+}
+
+.chartitle {
+	font-size: 70px;
+	display: inline-block;
+	position: absolute;
+	align-self: center;
+	padding: 9px;
+	color: white;
+}
+
+.air {
+	text-shadow: 2px 2px rgba(113, 75, 116, 0.4);
+}
+
+.earth {
+	text-shadow: 2px 2px rgba(57, 96, 75, 0.4);
+}
+
+.fire {
+	text-shadow: 2px 2px rgba(144, 35, 35, 0.2);
+}
+
+.water {
+	text-shadow: 2px 2px rgba(47, 63, 140, 0.2);
+}
+
+.orishadow {
+	text-shadow: 2px 2px rgba(160, 255, 255, 0.2);
+}
+
+
+/* Navigation */
+.nav {
+	grid-area: nav;
+	font-size: 20px;
+}
+
+.nav ul {
+	margin-top: 8px;
+}
+
+.nav li {
+	list-style-type: none;
+	float: left;
+	background: rgb(13, 13, 13);
+	border-radius: 3px;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+.nav li a {
+	text-decoration: none;
+	color: white;
+}
+
+.chardropdown {
+	position: absolute;
+	display: none;
+	background: rgb(13, 13, 13);
+	margin-top: 5px;
+	margin-left: -10px;
+	border-radius: 3px;
+}
+
+.chardropdown a {
+	margin: 10px;
+	display: block;
+	text-align: center;
+}
+
+
+/* Navigation Effects */
+
+.nav li:after {
+	content: "";
+	display: block;
+	height: 1px;
+	background-color: white;
+	width: 0;
+	transition: .5s ease;
+}
+
+.nav li:hover:after {
+	width: 100%;
+}
+
+.under:after {
+	content: "";
+	display: block;
+	height: 1px;
+	width: 0;
+	transition: .5s ease;
+}
+
+.under:hover:after {
+	width: 100%;
+}
+
+.charholder:hover .chardropdown {
+	display: block;
+}
+
+.airbc:after {
+	background-color: rgb(113, 75, 116);
+}
+
+.earthbc:after {
+	background-color: rgb(57, 96, 75);
+}
+
+.firebc:after {
+	background-color: rgb(144, 35, 35);
+}
+
+.waterbc:after {
+	background-color: rgb(47, 63, 140);
+}
+
+.oribc:after {
+	background-color: rgb(160, 255, 255);
+}
+
+
+/* Frame Data Tables */
+.framedata {
+	grid-area: fd;
+}
+
+table {
+	padding: 5px;
+	text-align: center;
+	margin-bottom: 25px;
+	border-collapse: collapse;
+	color: white;
+}
+
+th, td {
+	border: 2px solid rgb(13, 13, 13);
+	padding: 5px;
+}
+
+.boldmoves {
+	font-weight: bold;
+}
+
+.airth {
+	background-color: rgba(113, 75, 116, 0.3);
+}
+
+.earthth {
+	background-color: rgba(57, 96, 75, 0.3);
+}
+
+.fireth {
+	background-color: rgba(144, 35, 35, 0.3);
+}
+
+.waterth {
+	background-color: rgba(47, 63, 140, 0.3);
+}
+
+.orith {
+	background-color: rgba(160, 255, 255, 0.3);
+}
+
+
+/* Character Portraits */
+
+.absa {
+	background-image: url(../charpics/absa.png);
+}
+
+.clairen {
+	background-image: url(../charpics/clairen.png);
+}
+
+.elliana {
+	background-image: url(../charpics/elliana.png);
+}
+
+.etalus {
+	background-image: url(../charpics/etalus.png);
+}
+
+.forsburn {
+	background-image: url(../charpics/forsburn.png);
+}
+
+.kragg {
+	background-image: url(../charpics/kragg.png);
+}
+
+.maypul {
+	background-image: url(../charpics/maypul.png);
+}
+
+.orcane {
+	background-image: url(../charpics/orcane.png);
+}
+
+.ori {
+	background-image: url(../charpics/ori.png);
+}
+
+.ranno {
+	background-image: url(../charpics/ranno.png);
+}
+
+.sylvanos {
+	background-image: url(../charpics/sylvanos.png);
+}
+
+.wrastor {
+	background-image: url(../charpics/wrastor.png);
+}
+
+.zetterburn {
+	background-image: url(../charpics/zetterburn.png);
+}

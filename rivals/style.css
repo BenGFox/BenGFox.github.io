@@ -1,0 +1,299 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgb(128, 128, 128);
+}
+
+/* Grid */
+.gridmain {
+	display: grid;
+	margin-left: 16.5%;
+	margin-right: 16.5%;
+	margin-top: 1%;
+	grid-template-areas: 	". . . . . . . . . . . . . . . . . ."
+							". clairen clairen . forsburn forsburn . . attristage attristage . . absa absa . elliana elliana ."
+							". clairen clairen . forsburn forsburn . . attristage attristage . . absa absa . elliana elliana ."
+							". . . . . . . . . . . . . . . . . ."
+							". zetterburn zetterburn . hd hd hd hd hd hd hd hd hd hd . wrastor wrastor ."
+							". zetterburn zetterburn . hd hd hd hd hd hd hd hd hd hd . wrastor wrastor ."
+							". . . . hd hd hd hd hd hd hd hd hd hd . . . ."
+							". kragg kragg . hd hd hd hd hd hd hd hd hd hd . etalus etalus ."
+							". kragg kragg . hd hd hd hd hd hd hd hd hd hd . etalus etalus ."
+							". . . . . . . . . . . . . . . . . ."
+							". maypul maypul . sylvanos sylvanos . . ori ori . . orcane orcane . ranno ranno ."
+							". maypul maypul . sylvanos sylvanos . . ori ori . . orcane orcane . ranno ranno ."
+							". . . . . . . . . . . . . . . . . .";
+	grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+	background-color: rgb(128, 128, 128);
+}
+
+/* Header */
+.header {
+	grid-area: hd;
+	background-image: url(./charpics/roalogo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+	overflow: hidden;
+	position: relative;
+}
+
+.patch {
+	font-family: Calibri;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}
+
+
+/* Portraits */
+
+.portrait{
+	background-size: contain;
+	border-radius: 3px;
+	cursor: pointer;
+	position: relative;
+}
+
+.linker {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+}
+
+
+/* Portrait Effects */
+
+.topline {
+	top: 0;
+	left: 0;
+	width: 0px;
+	height: 1px;
+	background: white;
+	transition: 0.5s ease;
+	position: absolute;
+}
+
+.rightline {
+	top: 0;
+	right: 0;
+	height: 0px;
+	width: 1px;
+	background: white;
+	transition: 0.5s ease;
+	position: absolute;
+	margin-left: 99px;
+}
+
+.bottomline {
+	bottom: 0;
+	right: 0;
+	width: 0px;
+	height: 1px;
+	background: white;
+	transition: 0.5s ease;
+	position: absolute;
+	margin-top: 99px;
+}
+
+.leftline {
+	bottom: 0;
+	left: 0;
+	height: 0px;
+	width: 1px;
+	background: white;
+	transition: 0.5s ease;
+	position: absolute;
+}
+
+.portrait:hover .topline {
+	width: 100px;
+}
+
+.portrait:hover .bottomline {
+	width: 100px;
+}
+
+.portrait:hover .rightline {
+	height: 100px;
+}
+
+.portrait:hover .leftline {
+	height: 100px;
+}
+
+/* Tooltips */
+
+.tooltip {
+	width: 240px;
+	padding: 5px;
+	border-radius: 3px;
+	position: absolute;
+	z-index: 1;
+	border: 2px rgb(13, 13, 13) solid;
+	opacity: 0;
+	transition: opacity .5s ease;
+	transition-delay: .5s;
+}
+
+.tooltiptext {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-family: Calibri;
+	font-size: 17px;
+}
+
+.tttop {
+	top: -37px;
+	left: 50%;
+	margin-left: -115px;
+}
+
+.ttleft {
+	right: 102px;
+	top: 32.5px;
+}
+
+.ttright {
+	left: 102px;
+	top: 32.5px;
+}
+
+.ttair {
+	background-color: rgba(113, 75, 116, 0.4);
+}
+
+.ttearth {
+	background-color: rgba(57, 96, 75, 0.4);
+}
+
+.ttfire {
+	background-color: rgba(144, 35, 35, 0.3);
+}
+
+.ttwater {
+	background-color: rgba(47, 63, 140, 0.3);
+}
+
+.ttori {
+	background-color: rgba(160, 255, 255, 0.2);
+}
+
+.ttatt {
+	background-color: rgb(128, 128, 128);
+}
+
+
+/* Tooltip Effects */
+
+.portrait:hover .tooltip {
+	opacity: 1;
+}
+
+
+/* Portrait Box Shadows */
+
+.air {
+	box-shadow: 3px 3px 3px 0 rgba(113, 75, 116, 0.3);
+}
+
+.earth {
+	box-shadow: 3px 3px 3px 0 rgba(57, 96, 75, 0.3);
+}
+
+.fire {
+	box-shadow: 3px 3px 3px 0 rgba(144, 35, 35, 0.3);
+}
+
+.water {
+	box-shadow: 3px 3px 3px 0 rgba(47, 63, 140, 0.3);
+}
+
+.oriele {
+	box-shadow: 3px 3px 3px 0 rgba(160, 255, 255, 0.3);
+}
+
+.miscele {
+	box-shadow: 3px 3px 3px 0 rgba(127, 127, 127, 0.3);
+}
+
+
+/* Character Portraits */
+
+.absa {
+	grid-area: absa;
+	background-image: url(./charpics/absa.png);
+}
+
+.clairen {
+	grid-area: clairen;
+	background-image: url(./charpics/clairen.png);
+}
+
+.elliana {
+	grid-area: elliana;
+	background-image: url(./charpics/elliana.png);
+}
+
+.etalus {
+	grid-area: etalus;
+	background-image: url(./charpics/etalus.png);
+}
+
+.forsburn {
+	grid-area: forsburn;
+	background-image: url(./charpics/forsburn.png);
+}
+
+.kragg {
+	grid-area: kragg;
+	background-image: url(./charpics/kragg.png);
+}
+
+.maypul {
+	grid-area: maypul;
+	background-image: url(./charpics/maypul.png);
+}
+
+.orcane {
+	grid-area: orcane;
+	background-image: url(./charpics/orcane.png);
+}
+
+.ori {
+	grid-area: ori;
+	background-image: url(./charpics/ori.png);
+}
+
+.ranno {
+	grid-area: ranno;
+	background-image: url(./charpics/ranno.png);
+}
+
+.sylvanos {
+	grid-area: sylvanos;
+	background-image: url(./charpics/sylvanos.png);
+}
+
+.wrastor {
+	grid-area: wrastor;
+	background-image: url(./charpics/wrastor.png);
+}
+
+.zetterburn {
+	grid-area: zetterburn;
+	background-image: url(./charpics/zetterburn.png);
+}
+
+.attristage {
+	grid-area: attristage;
+	background-image: url(./charpics/attributes.png);	
+}

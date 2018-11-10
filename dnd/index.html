@@ -1,0 +1,239 @@
+<DOCTYPE! HTML>
+<html>
+<head>
+	<link href="./style.css" type="text/css" rel="stylesheet">
+	<title>
+		D&D Character Randomiser
+	</title>
+</head>
+
+<body>
+
+	<script src="./randomiser.js"></script>
+	
+	<main class="gridmain">
+	
+
+		<!--Randomiser Result-->
+		<div class="raceRandomiser">
+			<div class="resTitle">Race</div>
+			<div id="raceResult"></div>
+		</div>
+
+		<div class="classRandomiser">
+			<div class="resTitle">Class</div>
+			<div id="classResult"></div>
+		</div>
+
+		<div class="backgroundRandomiser">
+			<div class="resTitle">Background</div>
+			<div id="backgroundResult"></div>
+		</div>
+	
+
+		<!--Generate Button-->
+		<div class="generate">
+			<button type="button" class="genButton" onclick="randomRace(); randomClass(); randomBackground(); gen()">Generate!</button>
+		</div>
+
+
+		<!--Expansions-->
+		<div class="expansions">
+
+			<div class="subExp">
+				<div class="subExpTitle">Elemental Evil</div>
+				<div class="mainBox">
+ 
+  					<div class="subBox">
+  					  <div class="subTitle">Races</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="eeRacesSwitch()"></span>
+  					  </label> 
+  					</div>
+  					
+ 					 <div class="subBox">
+    				    <div class="subTitle">Backgrounds</div>
+    					<label class="subSwitch">
+      						<input type="checkbox">
+      						<span class="slider" onclick="eeBackgroundsSwitch()"></span>
+    					</label>
+  					</div>
+
+				</div>
+			</div>
+
+			<div class="subExp">
+				<div class="subExpTitle">Sword Coast Adventuring Guide</div>
+				<div class="mainBox">
+ 
+  					<div class="subBox">
+  					  <div class="subTitle">Races</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="scagRacesSwitch()"></span>
+  					  </label> 
+  					</div>
+
+  					<div class="subBox">
+  					  <div class="subTitle">Classes</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="scagClassesSwitch()"></span>
+  					  </label> 
+  					</div>
+
+  					<div class="subBox">
+  					  <div class="subTitle">Backgrounds</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="scagBackgroundsSwitch()"></span>
+  					  </label> 
+  					</div>
+
+				</div>
+			</div>
+
+			<div class="subExp">
+				<div class="subExpTitle">Volo's Guide to Monsters</div>
+				<div class="mainBox">
+ 
+  					<div class="subBox">
+  					  <div class="subTitle">Races</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="volosSwitch()"></span>
+  					  </label> 
+  					</div>
+
+				</div>
+			</div>
+
+			<div class="subExp">
+				<div class="subExpTitle">Xanathar's Guide to Everything</div>
+				<div class="mainBox">
+ 
+  					<div class="subBox">
+  					  <div class="subTitle">Classes</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="xgteSwitch()"></span>
+  					  </label> 
+  					</div>
+
+				</div>
+			</div>
+
+			<div class="subExp">
+				<div class="subExpTitle">Mordenkainen's Tome of Foes</div>
+				<div class="mainBox">
+ 
+  					<div class="subBox">
+  					  <div class="subTitle">Races</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="mtofSwitch()"></span>
+  					  </label> 
+  					</div>
+
+				</div>
+			</div>
+
+			<div class="subExp">
+				<div class="subExpTitle">The Tortle Package</div>
+				<div class="mainBox">
+ 
+  					<div class="subBox">
+  					  <div class="subTitle">Race</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="tortleSwitch()"></span>
+  					  </label> 
+  					</div>
+
+				</div>
+			</div>
+
+			<div class="subExp">
+				<div class="subExpTitle">Curse of Strahd</div>
+				<div class="mainBox">
+ 
+  					<div class="subBox">
+  					  <div class="subTitle">Backgrounds</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="cosSwitch()"></span>
+  					  </label> 
+  					</div>
+
+				</div>
+			</div>
+
+			<div class="subExp">
+				<div class="subExpTitle">Out of the Abyss</div>
+				<div class="mainBox">
+ 
+  					<div class="subBox">
+  					  <div class="subTitle">Backgrounds</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="ootaSwitch()"></span>
+  					  </label> 
+  					</div>
+
+				</div>
+			</div>
+
+			<div class="subExp">
+				<div class="subExpTitle">Tomb of Annihilation</div>
+				<div class="mainBox">
+ 
+  					<div class="subBox">
+  					  <div class="subTitle">Backgrounds</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="toaSwitch()"></span>
+  					  </label> 
+  					</div>
+
+				</div>
+			</div>
+
+			<div class="subExp">
+				<div class="subExpTitle">Unearthed Arcana</div>
+				<div class="mainBox">
+ 
+  					<div class="subBox">
+  					  <div class="subTitle">Everything</div>
+  					  <label class="subSwitch">
+  					    <input type="checkbox">
+  					    <span class="slider" onclick="uaSwitch()"></span>
+  					  </label> 
+  					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+
+		<!--Previous Results-->
+		<table id="prevResults">
+      <tr>
+        <th class="prevTitle" colspan="3">Previous Results</th>
+      </tr>  
+    </table>
+
+
+		<!--Contact Me-->
+		<div class="contact">
+    <a class="emailMe contactSpacing" href="mailto:bengfox@gmail.com"?Subject=Development%20Enquiry">Email Me</a>
+    <a class="portfolioLink contactSpacing" href="http://bengfox.github.io" target="_blank">My Portfolio</a>
+    </div>
+
+
+	</main>
+
+</body>
+
+</html>
